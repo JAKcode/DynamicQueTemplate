@@ -69,7 +69,7 @@ void Queue<T>:: Dequeue()
 template <class T>
 void Queue<T>::Display()
 {
-	NodeStruct * showval
+	NodeStruct * showval;
 	if (Front!=NULL)
 	{
 	while (Front!=NULL)
