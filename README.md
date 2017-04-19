@@ -41,7 +41,7 @@ void Queue<T>::Enqueue(T num)
 	NodeStruct * temp = new NodeStruct; // Dynamic Traversal Pointer
 	//Input from user **CHANGED TO PARAMETER**
 	temp -> val = num; //Private variable within node is set to user input ****Recently changed to Template data type****
-	temp -> NULL;//traversal pointer no longer contains data
+	temp ->next = NULL;//traversal pointer no longer contains data
 	if (Front == NULL) //If the list is empty when the value is added
 	{
 		Front = temp; //Front is now pointing to the node that temp is (If list is empty first node should be the Front)
