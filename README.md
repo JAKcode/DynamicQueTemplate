@@ -28,7 +28,7 @@ void Display ();//Displays the list
 };
 template <class T>
 Queue<T>::~Queue()
-{	Node Struct * NodePtr, *NodeNext;
+{	NodeStruct * NodePtr, *NodeNext;
 	while (NodePtr != NULL) //If the list is not empty
 		NodeNext = NodePtr->next; // Traversal pointer is set to point to the next node
 	delete NodePtr; //Node is deleted
@@ -38,7 +38,7 @@ template <class T>
 void Queue<T>::Enqueue(T num)
 {
 	//Variable that holds input data  !!!!!MUST CHANGE THIS TO BE READ IN FOR TEMPLATE TO FUNCTION!!!!! ***CORRECTED?***
-	node * temp = new node; // Dynamic Traversal Pointer
+	NodeStruct * temp = new NodeStruct; // Dynamic Traversal Pointer
 	//Input from user **CHANGED TO PARAMETER**
 	temp -> val = num; //Private variable within node is set to user input ****Recently changed to Template data type****
 	temp -> NULL;//traversal pointer no longer contains data
@@ -56,7 +56,7 @@ void Queue<T>::Enqueue(T num)
 template <class T>
 void Queue<T>:: Dequeue()
 {
-	Node Struct * NodePtr, * NodeTemp;
+	NodeStruct * NodePtr, * NodeTemp;
 	while (Front!=NULL)
 	{
 		NodePtr	= Front; // Pointer to the beginning node
@@ -69,7 +69,7 @@ void Queue<T>:: Dequeue()
 template <class T>
 void Queue<T>::Display()
 {
-	Node Struct * showval
+	NodeStruct * showval
 	if (Front!=NULL)
 	{
 	while (Front!=NULL)
@@ -85,3 +85,4 @@ void Queue<T>::Display()
 		cout << "List is empty";
 	}
 }
+#endif
